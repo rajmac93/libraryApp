@@ -1,12 +1,15 @@
 import React from 'react';
 
-export default function WeatherInfo(props) {
+export default function WeatherInfo({ weatherData }) {
 	return (
 		<div>
-			<p>{props.name}</p>
-			<p>{`${Math.round(props.main.temp)}°C`}</p>
-			<p>Temperatura odczuwalna: {props.main.feels_like}</p>
-			<p>{props.weather[0].main}</p>
+			<p>{weatherData.name}</p>
+			<p>{`${Math.round(weatherData.main.temp)}°C`}</p>
+			<p>
+				Temperatura odczuwalna:{' '}
+				{weatherData.main.feels_like}
+			</p>
+			<p>{weatherData.weather[0].main}</p>
 		</div>
 	);
 }

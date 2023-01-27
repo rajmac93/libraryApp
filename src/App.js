@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import './App.css';
+import WeatherInfo from './components/WeatherInfo';
 
 function App() {
 	const apiKey = '01abbb72af010a0f3c7dcf65f26e9a51';
@@ -33,17 +34,7 @@ function App() {
 						<h1>Witaj w aplikacji WeatherApp</h1>
 					</div>
 				) : (
-					<div>
-						<p>{weatherData.name}</p>
-						<p>{`${Math.round(
-							weatherData.main.temp
-						)}°C`}</p>
-						<p>
-							Temperatura odczuwalna:{' '}
-							{weatherData.main.feels_like}
-						</p>
-						<p>{weatherData.weather[0].main}</p>
-					</div>
+					<WeatherInfo weatherData={weatherData} />
 				)}
 				{weatherData.cod === '404' ? (
 					<p>Nie ma takiego miasta.</p>
