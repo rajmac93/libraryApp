@@ -20,7 +20,8 @@ function App() {
 	};
 
 	return (
-		<>
+		// when diffrnent weather then should change bg as well (adding className to bg class)
+		<div className='bg'>
 			<main className='container'>
 				<input
 					className='input'
@@ -29,20 +30,22 @@ function App() {
 					value={city}
 					onKeyDown={getWeather}
 				/>
-				{typeof weatherData.main === 'undefined' ? (
-					<div>
-						<h1>Witaj w aplikacji WeatherApp</h1>
-					</div>
-				) : (
-					<WeatherInfo weatherData={weatherData} />
-				)}
-				{weatherData.cod === '404' ? (
-					<p>Nie ma takiego miasta.</p>
-				) : (
-					<></>
-				)}
+				<div className='weather-info-container'>
+					{typeof weatherData.main === 'undefined' ? (
+						<div>
+							<h1>Witaj w aplikacji WeatherApp</h1>
+						</div>
+					) : (
+						<WeatherInfo weatherData={weatherData} />
+					)}
+					{weatherData.cod === '404' ? (
+						<p>Nie ma takiego miasta.</p>
+					) : (
+						<></>
+					)}
+				</div>
 			</main>
-		</>
+		</div>
 	);
 }
 
