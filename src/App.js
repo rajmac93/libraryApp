@@ -20,7 +20,7 @@ function App() {
 
 	return (
 		<>
-			<div className='container'>
+			<main className='container'>
 				<input
 					className='input'
 					placeholder='Wpisz miasto...'
@@ -38,6 +38,10 @@ function App() {
 						<p>{`${Math.round(
 							weatherData.main.temp
 						)}°C`}</p>
+						<p>
+							Temperatura odczuwalna:{' '}
+							{weatherData.main.feels_like}
+						</p>
 						<p>{weatherData.weather[0].main}</p>
 					</div>
 				)}
@@ -46,7 +50,7 @@ function App() {
 				) : (
 					<></>
 				)}
-			</div>
+			</main>
 		</>
 	);
 }
