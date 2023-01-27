@@ -20,7 +20,7 @@ function App() {
 	};
 
 	return (
-		// when diffrnent weather then should change bg as well (adding className to bg class)
+		// when diffrnent weather then should change bg as well[Clouds, Rain, Fog] (adding className to bg class)
 		<div className='bg'>
 			<main className='container'>
 				<input
