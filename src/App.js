@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './App.css';
 import WeatherInfo from './components/WeatherInfo';
@@ -22,10 +22,11 @@ function App() {
 	return (
 		<>
 			<img
-				src={`https://source.unsplash.com/1680x1400/?${weatherData.weather[0].main}`}
+				src={`https://source.unsplash.com/1024x768/?snowy`}
 				className='bg'
 				alt='cloudy'
 			/>
+			{/* {console.log(weatherData.weather[0].main)} */}
 			<main className='container'>
 				<input
 					className='input'
@@ -37,7 +38,7 @@ function App() {
 				<div className='weather-info-container'>
 					{typeof weatherData.main === 'undefined' ? (
 						<div>
-							<h1>Witaj w aplikacji WeatherApp</h1>
+							<h1>Witaj w aplikacji Weather App</h1>
 						</div>
 					) : (
 						<WeatherInfo weatherData={weatherData} />

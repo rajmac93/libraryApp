@@ -12,7 +12,7 @@ export default function WeatherInfo({ weatherData }) {
 			</p>
 			<p>
 				<strong>Temperatura odczuwalna: </strong>
-				{weatherData.main.feels_like}°C
+				{Math.round(weatherData.main.feels_like)}°C
 			</p>
 			<p>{weatherData.weather[0].description}</p>
 		</div>

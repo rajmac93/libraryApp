@@ -10,10 +10,14 @@ html {
 	min-height: 30vh;
 }
 
-.bg {
+img {
 	position: fixed;
-	height: 100%;
-	width: 100%;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
 	z-index: -1000;
 }
 
