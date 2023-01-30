@@ -18,7 +18,7 @@ function App() {
 				.then(data => setWeatherData(data));
 		}
 	};
-
+	console.log('not working right now');
 	return (
 		<>
 			<img
