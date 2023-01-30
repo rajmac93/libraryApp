@@ -20,8 +20,12 @@ function App() {
 	};
 
 	return (
-		// when diffrnent weather then should change bg as well[Clouds, Rain, Fog] (adding className to bg class)
-		<div className='bg'>
+		<>
+			<img
+				src={`https://source.unsplash.com/1680x1400/?${weatherData.weather[0].main}`}
+				className='bg'
+				alt='cloudy'
+			/>
 			<main className='container'>
 				<input
 					className='input'
@@ -45,7 +49,7 @@ function App() {
 					)}
 				</div>
 			</main>
-		</div>
+		</>
 	);
 }
 

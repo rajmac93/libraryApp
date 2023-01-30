@@ -11,8 +11,10 @@ html {
 }
 
 .bg {
-	background-image: url(./images/bg-images/default-image.jpg);
-	height: 100vh;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -1000;
 }
 
 .cloudy {
