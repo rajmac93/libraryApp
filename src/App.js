@@ -19,6 +19,7 @@ function App() {
 		}
 	};
 	const changeBg = () => {
+		// needed to set bg image
 		if (typeof weatherData.main !== 'undefined') {
 			return weatherData.weather[0].main;
 		} else {
