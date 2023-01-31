@@ -26,34 +26,6 @@ img.bg {
 	z-index: -1000;
 }
 
-.cloudy {
-	background-image: url(./images/bg-images/full-cloudy.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-}
-.sunny {
-	background-image: url(./images/bg-images/sunny.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-}
-.rainy {
-	background-image: url(./images/bg-images/rainy.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-}
-.stormy {
-	background-image: url(./images/bg-images/stormy.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-}
 .container {
 	font-family: 'Roboto', sans-serif;
 	display: flex;
