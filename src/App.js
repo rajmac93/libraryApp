@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import './App.css';
 import WeatherInfo from './components/WeatherInfo';
@@ -18,15 +18,20 @@ function App() {
 				.then(data => setWeatherData(data));
 		}
 	};
-	console.log('not working right now');
+	const changeBg = () => {
+		if (typeof weatherData.main !== 'undefined') {
+			return weatherData.weather[0].main;
+		} else {
+			return 'weather';
+		}
+	};
 	return (
 		<>
 			<img
-				src={`https://source.unsplash.com/1024x768/?snowy`}
+				src={`https://source.unsplash.com/1920x1080/?${changeBg()}`}
 				className='bg'
-				alt='cloudy'
+				alt={`${changeBg()}`}
 			/>
-			{/* {console.log(weatherData.weather[0].main)} */}
 			<main className='container'>
 				<input
 					className='input'
